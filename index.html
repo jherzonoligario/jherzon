@@ -1,165 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jherzon Oligario — Portfolio</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jherzon Oligario — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080808;
+    --accent: #C8F97D;
+    --text: #EDEDE9;
+    --muted: #888884;
+    --border: rgba(255,255,255,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+
+  /* Custom Cursor */
+  .cursor { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; }
+  .cursor-ring { width: 34px; height: 34px; border: 1px solid rgba(200,249,125,0.3); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transition: transform 0.1s ease-out; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem; position: absolute; width: 100%; top: 0; }
+  .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.5rem; text-decoration: none; color: var(--text); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; transition: 0.3s; }
+  .nav-links a:hover { color: var(--accent); }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+  /* About Section matching Image */
+  .about-section { padding: 10rem 0; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 6rem; align-items: start; }
+  
+  .section-tag { font-family: 'DM Mono', monospace; color: var(--accent); font-size: 0.8rem; margin-bottom: 3rem; text-transform: uppercase; }
+  .section-tag span { color: var(--muted); margin-right: 0.5rem; }
+
+  .content h1 { font-family: 'Syne', sans-serif; font-size: 2.8rem; line-height: 1.1; margin-bottom: 2rem; }
+  .content h1 em { font-style: italic; font-weight: 400; color: var(--text); opacity: 0.8; }
+  .content p { color: var(--muted); line-height: 1.8; font-size: 1.1rem; margin-bottom: 1.5rem; max-width: 500px; }
+  .content .quote { border-left: 2px solid var(--accent); padding-left: 1.5rem; margin-top: 2rem; font-style: italic; color: var(--text); }
+
+  /* Right Side Stats Stack */
+  .stats-stack { border: 1px solid var(--border); }
+  .stat-item { padding: 2.5rem; border-bottom: 1px solid var(--border); transition: background 0.4s ease; }
+  .stat-item:last-child { border-bottom: none; }
+  .stat-item:hover { background: rgba(255,255,255,0.02); }
+  .stat-item h2 { font-family: 'Syne', sans-serif; font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem; }
+  .stat-item p { font-family: 'DM Mono', monospace; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; }
+
+  /* Animations */
+  .fade-up { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1); }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  .get-in-touch { color: var(--accent); text-decoration: none; font-family: 'DM Mono', monospace; display: inline-block; margin-top: 2rem; border-bottom: 1px solid transparent; transition: 0.3s; }
+  .get-in-touch:hover { border-color: var(--accent); }
+
+  @media (max-width: 900px) {
+    .about-section { grid-template-columns: 1fr; gap: 4rem; }
+    nav { padding: 2rem; }
+  }
+</style>
 </head>
 <body>
 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<nav id="nav">
-  <a href="#" class="nav-logo">J<span>.</span>Oligario</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact" class="nav-cta">Contact</a></li>
-  </ul>
+<nav>
+  <a href="#" class="logo">J.Oligario</a>
+  <div class="nav-links">
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </div>
 </nav>
 
-<section class="hero" id="home">
-  <div class="hero-bg-text">JO</div>
-  <div class="hero-badge">Open to opportunities</div>
-  <h1 class="hero-title">
-    <div class="line1">Jherzon</div>
-    <div class="line2">Oligario<span class="accent">.</span></div>
-  </h1>
-  <div class="hero-bottom">
-    <p class="hero-desc">A motivated IT student from Pampanga, Philippines — building websites, organizing data, and writing clear documentation one project at a time.</p>
-    <div class="hero-roles">
-      <span class="hero-role">Web Developer</span>
-      <span class="hero-role">Technical Writer</span>
-      <span class="hero-role">Database Engineer</span>
-      <span class="hero-role">Data Analyst</span>
+<div class="container">
+  <section class="about-section">
+    <div class="content fade-up">
+      <div class="section-tag"><span>01 —</span> About Me</div>
+      <h1>Curious student. <em>Future</em> developer.</h1>
+      <p>I'm Jherzon Oligario, an Information Technology student at Guagua National Colleges Inc., based in Bancal, Guagua, Pampanga.</p>
+      <p>I enjoy creating simple websites, organizing data, and writing documentation that makes complex things easy to understand.</p>
+      <p class="quote">"I am currently focused on improving my skills in web development and gaining real-world experience."</p>
+      <a href="mailto:jherzonoligario3@gmail.com" class="get-in-touch">Get in Touch —&gt;</a>
     </div>
-  </div>
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 1v12M1 8l5 5 5-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </div>
-</section>
 
-<div class="marquee-bar">
-  <div class="marquee-track">
-    <span class="marquee-item"><span>★</span> HTML & CSS</span>
-    <span class="marquee-item"><span>★</span> JavaScript</span>
-    <span class="marquee-item"><span>★</span> Web Development</span>
-    <span class="marquee-item"><span>★</span> Technical Writing</span>
-    <span class="marquee-item"><span>★</span> Microsoft Excel</span>
-    <span class="marquee-item"><span>★</span> Data Analysis</span>
-    <span class="marquee-item"><span>★</span> Documentation</span>
-    <span class="marquee-item"><span>★</span> VS Code</span>
-    <!-- Repeat for seamless loop -->
-    <span class="marquee-item"><span>★</span> HTML & CSS</span>
-    <span class="marquee-item"><span>★</span> JavaScript</span>
-    <span class="marquee-item"><span>★</span> Web Development</span>
-    <span class="marquee-item"><span>★</span> Technical Writing</span>
-    <span class="marquee-item"><span>★</span> Microsoft Excel</span>
-    <span class="marquee-item"><span>★</span> Data Analysis</span>
-    <span class="marquee-item"><span>★</span> Documentation</span>
-    <span class="marquee-item"><span>★</span> VS Code</span>
-  </div>
+    <div class="stats-stack fade-up" style="transition-delay: 0.2s;">
+      <div class="stat-item">
+        <h2>2024</h2>
+        <p>Started coding</p>
+      </div>
+      <div class="stat-item">
+        <h2>2026</h2>
+        <p>Expected grad</p>
+      </div>
+      <div class="stat-item">
+        <h2>B.S.</h2>
+        <p>Info Technology</p>
+      </div>
+      <div class="stat-item">
+        <h2>PH</h2>
+        <p>Pampanga</p>
+      </div>
+    </div>
+  </section>
 </div>
 
-<section id="about">
-  <div class="section-label"><span class="num">01 —</span> About Me</div>
-  <div class="about-grid">
-    <div class="fade-up">
-      <h2 class="about-heading">Curious student. <em>Future</em> developer.</h2>
-      <p class="about-text">I'm Jherzon Oligario, an Information Technology student at Guagua National Colleges Inc., based in Bancal, Guagua, Pampanga.</p>
-      <p class="about-text">I enjoy creating simple websites, organizing data, and writing documentation that makes complex things easy to understand.</p>
-      <div class="about-goal">"I am currently focused on improving my skills in web development and gaining real-world experience."</div>
-      <a href="#contact" class="big-cta" style="margin-top:2rem; display:inline-flex;">Get in Touch →</a>
-    </div>
-    <div class="fade-up d1">
-      <div class="about-stats">
-        <div class="stat-cell"><div class="stat-num">2024</div><div class="stat-label">Started coding</div></div>
-        <div class="stat-cell"><div class="stat-num">2026</div><div class="stat-label">Expected grad</div></div>
-        <div class="stat-cell"><div class="stat-num">B.S.</div><div class="stat-label">Info Technology</div></div>
-        <div class="stat-cell"><div class="stat-num">PH</div><div class="stat-label">Pampanga</div></div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-icon">🎓</div>
-        <div>
-          <div class="edu-school">Guagua National Colleges Inc.</div>
-          <div class="edu-degree">BS in Information Technology</div>
-          <span class="edu-year">2026</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<script>
+  // Mouse Cursor Logic
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+    // Ring follows with delay
+    setTimeout(() => {
+      ring.style.left = (e.clientX - 13) + 'px';
+      ring.style.top = (e.clientY - 13) + 'px';
+    }, 50);
+  });
 
-<section id="skills">
-  <div class="section-label"><span class="num">02 —</span> Skills & Tools</div>
-  <div class="skills-grid fade-up">
-    <div class="skill-card">
-      <span class="skill-icon">🌐</span>
-      <div class="skill-name">Web Development</div>
-      <div class="skill-tags">
-        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <span class="skill-icon">✍️</span>
-      <div class="skill-name">Technical Writing</div>
-      <div class="skill-tags">
-        <span class="tag">System Docs</span><span class="tag">Reports</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <span class="skill-icon">🗄️</span>
-      <div class="skill-name">Database</div>
-      <div class="skill-tags">
-        <span class="tag">SQL</span><span class="tag">ERD</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <span class="skill-icon">📊</span>
-      <div class="skill-name">Data Analysis</div>
-      <div class="skill-tags">
-        <span class="tag">Excel</span><span class="tag">Charts</span>
-      </div>
-    </div>
-  </div>
-</section>
+  // Fade-in Animation on Scroll
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
 
-<section id="projects">
-  <div class="section-label"><span class="num">03 —</span> Projects</div>
-  <div class="projects-list fade-up">
-    <div class="project-row">
-      <span class="project-num">01</span>
-      <div class="project-info">
-        <div class="project-name">Personal Portfolio</div>
-        <div class="project-desc">A website that showcases my profile, skills, and projects.</div>
-      </div>
-      <div class="project-meta">
-        <span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JS</span>
-      </div>
-    </div>
-  </div>
-</section>
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 
-<section id="contact">
-  <div class="section-label"><span class="num">04 —</span> Contact</div>
-  <div class="contact-wrapper">
-    <div class="fade-up">
-      <h2 class="contact-heading">Let's <span class="ghost">grow</span> together.</h2>
-      <a href="mailto:jherzonoligario3@gmail.com" class="big-cta">Send an Email →</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 <span>Jherzon Oligario</span>. Bancal, Guagua, Pampanga.</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
