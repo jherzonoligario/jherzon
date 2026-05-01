@@ -126,10 +126,15 @@ footer { border-top:1px solid var(--border); padding:2rem 4rem; display:flex; ju
 footer p { font-family:var(--font-mono); font-size:.68rem; color:var(--dim); letter-spacing:.06em; }
 footer p span { color:var(--accent); }
 
-.fade-up { opacity:0; transform:translateY(30px); transition:opacity .7s ease,transform .7s ease; }
-.fade-up.d1 { transition-delay:.15s; }
-.fade-up.d2 { transition-delay:.3s; }
-.fade-up.visible { opacity:1; transform:translateY(0); }
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.d1 { transition-delay: 0.15s; }
+.fade-up.d2 { transition-delay: 0.3s; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
 
 @media (max-width:900px) {
   nav { padding:1.25rem 2rem; }
