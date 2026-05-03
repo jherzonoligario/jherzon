@@ -41,7 +41,9 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-// Safety fallback — show all content after 600ms no matter what
+// Force show everything immediately as fallback
+document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+
 setTimeout(() => {
-  document.querySelectorAll('.fade-up:not(.visible)').forEach(el => el.classList.add('visible'));
-}, 600);
+  document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+}, 100);
