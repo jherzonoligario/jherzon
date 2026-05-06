@@ -4,73 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jherzon Oligario — Portfolio</title>
-  <meta name="description" content="Jherzon Oligario Portfolio" />
+  <meta name="description" content="Jherzon Oligario — IT Student & Aspiring Web Developer" />
   <meta name="author" content="Jherzon Oligario" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- CURSOR -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="ring"></div>
 
   <!-- NAV -->
   <nav id="nav">
-    <a href="#" class="nav-logo">J<span>.</span>Oligario</a>
+    <a href="#home" class="nav-logo">J<span>.</span>O</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
+    <button class="nav-menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#certificates" class="mobile-link">Certificates</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-bg-text">JO</div>
-    <div class="hero-badge">Open to opportunities</div>
-    <h1 class="hero-title">
-      <div class="line1">Jherzon</div>
-      <div class="line2">Oligario<span class="accent">.</span></div>
-    </h1>
-    <div class="hero-bottom">
-      <p class="hero-desc">A motivated IT student from Pampanga, Philippines — building websites, organizing data, and writing clear documentation one project at a time.</p>
-      <div class="hero-roles">
-        <span class="hero-role">Student Web Developer</span>
-        <span class="hero-role">Technical Writing Student</span>
-        <span class="hero-role">Aspiring Database Engineer</span>
-        <span class="hero-role">Data Analysis Student</span>
-      </div>>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-glow hero-glow-3"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open to opportunities
+      </div>
+
+      <div class="hero-photo-wrapper">
+        <div class="hero-photo">
+          <img src="photo.jpg" alt="Jherzon Oligario" class="photo-img" />
+          <div class="photo-ring"></div>
+          <div class="photo-ring2"></div>
+        </div>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-name">Jherzon Oligario</span>
+        <span class="hero-role-line">
+          <span class="role-prefix">—</span>
+          <span class="typing-text" id="typingText"></span>
+          <span class="typing-cursor">|</span>
+        </span>
+      </h1>
+
+      <p class="hero-desc">An aspiring IT student from Guagua National Colleges Inc with a strong interest in web development. Currently learning and building skills in HTML, CSS, JavaScript, and PHP, with a focus on creating clean, responsive, and user-friendly websites. Motivated, adaptable, and eager to learn, I am continuously improving my abilities while working toward becoming a professional web developer.</p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Hire Me ↗</a>
+        <a href="#" class="btn-secondary" id="cvBtn">Download CV ↓</a>
+      </div>
     </div>
+
     <div class="scroll-hint">
+      <div class="scroll-line"></div>
       <span>Scroll</span>
-      <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
-        <path d="M6 1v12M1 8l5 5 5-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
     </div>
   </section>
 
   <!-- MARQUEE -->
   <div class="marquee-bar">
     <div class="marquee-track">
-      <span class="marquee-item"><span>★</span> HTML &amp; CSS</span>
-      <span class="marquee-item"><span>★</span> JavaScript</span>
-      <span class="marquee-item"><span>★</span> Web Development</span>
-      <span class="marquee-item"><span>★</span> Technical Writing</span>
-      <span class="marquee-item"><span>★</span> Microsoft Excel</span>
-      <span class="marquee-item"><span>★</span> Data Analysis</span>
-      <span class="marquee-item"><span>★</span> Documentation</span>
-      <span class="marquee-item"><span>★</span> VS Code</span>
-      <span class="marquee-item"><span>★</span> HTML &amp; CSS</span>
-      <span class="marquee-item"><span>★</span> JavaScript</span>
-      <span class="marquee-item"><span>★</span> Web Development</span>
-      <span class="marquee-item"><span>★</span> Technical Writing</span>
-      <span class="marquee-item"><span>★</span> Microsoft Excel</span>
-      <span class="marquee-item"><span>★</span> Data Analysis</span>
-      <span class="marquee-item"><span>★</span> Documentation</span>
-      <span class="marquee-item"><span>★</span> VS Code</span>
+      <span class="marquee-item"><span>✦</span> HTML & CSS</span>
+      <span class="marquee-item"><span>✦</span> JavaScript</span>
+      <span class="marquee-item"><span>✦</span> PHP</span>
+      <span class="marquee-item"><span>✦</span> Web Development</span>
+      <span class="marquee-item"><span>✦</span> Technical Writing</span>
+      <span class="marquee-item"><span>✦</span> Microsoft Excel</span>
+      <span class="marquee-item"><span>✦</span> Data Analysis</span>
+      <span class="marquee-item"><span>✦</span> Documentation</span>
+      <span class="marquee-item"><span>✦</span> VS Code</span>
+      <span class="marquee-item"><span>✦</span> HTML & CSS</span>
+      <span class="marquee-item"><span>✦</span> JavaScript</span>
+      <span class="marquee-item"><span>✦</span> PHP</span>
+      <span class="marquee-item"><span>✦</span> Web Development</span>
+      <span class="marquee-item"><span>✦</span> Technical Writing</span>
+      <span class="marquee-item"><span>✦</span> Microsoft Excel</span>
+      <span class="marquee-item"><span>✦</span> Data Analysis</span>
+      <span class="marquee-item"><span>✦</span> Documentation</span>
+      <span class="marquee-item"><span>✦</span> VS Code</span>
     </div>
   </div>
 
@@ -78,26 +115,41 @@
   <section id="about">
     <div class="section-label"><span class="num">01 —</span> About Me</div>
     <div class="about-grid">
-      <div>
-        <h2 class="about-heading">Curious student. <em>Future</em> developer.</h2>
+      <div class="about-left reveal">
+        <h2 class="about-heading">Curious student.<br><em>Future</em> developer.</h2>
         <p class="about-text">I'm Jherzon Oligario, an Information Technology student at Guagua National Colleges Inc., based in Bancal, Guagua, Pampanga. I started learning web development in 2024 and have been passionate about building things ever since.</p>
         <p class="about-text">I enjoy creating simple websites, organizing data, and writing documentation that makes complex things easy to understand. Though I haven't had formal employment yet, I've built real skills through school projects — developing responsibility, teamwork, and the drive to deliver results.</p>
         <div class="about-goal">"I am currently focused on improving my skills in web development and aiming to become a professional developer in the future. I am passionate about learning and building projects that help me grow and gain real-world experience."</div>
-        <a href="#contact" class="big-cta" style="margin-top:2rem">Get in Touch →</a>
+        <div class="about-actions">
+          <a href="#contact" class="btn-primary">Get in Touch →</a>
+          <a href="#" class="btn-ghost" id="cvBtn2">Download CV ↓</a>
+        </div>
       </div>
-      <div>
+      <div class="about-right reveal delay-1">
         <div class="about-stats">
-          <div class="stat-cell"><div class="stat-num">2024</div><div class="stat-label">Started coding</div></div>
-          <div class="stat-cell"><div class="stat-num">2028</div><div class="stat-label">Expected grad</div></div>
-          <div class="stat-cell"><div class="stat-num">B.S.</div><div class="stat-label">Info Technology</div></div>
-          <div class="stat-cell"><div class="stat-num">PH</div><div class="stat-label">Pampanga, Philippines</div></div>
+          <div class="stat-cell">
+            <div class="stat-num">2024</div>
+            <div class="stat-label">Started Coding</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">2026</div>
+            <div class="stat-label">Expected Grad</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">B.S.</div>
+            <div class="stat-label">Info Technology</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">PH</div>
+            <div class="stat-label">Pampanga, Philippines</div>
+          </div>
         </div>
         <div class="edu-card">
           <div class="edu-icon">🎓</div>
-          <div>
+          <div class="edu-info">
             <div class="edu-school">Guagua National Colleges Inc.</div>
             <div class="edu-degree">Bachelor of Science in Information Technology</div>
-            <span class="edu-year">Expected Graduation: 2028</span>
+            <span class="edu-year">Expected Graduation: 2026</span>
           </div>
         </div>
       </div>
@@ -105,91 +157,114 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" style="padding-top:0">
-    <div class="section-label"><span class="num">02 —</span> Skills &amp; Tools</div>
+  <section id="skills">
+    <div class="section-label"><span class="num">02 —</span> Skills & Tools</div>
     <div class="skills-grid">
-      <div class="skill-card">
-        <span class="skill-icon">🌐</span>
+      <div class="skill-card reveal">
+        <div class="skill-icon-wrap">🌐</div>
         <div class="skill-name">Web Development</div>
         <div class="skill-tags">
-          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">VS Code</span><span class="tag">DevTools</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">PHP</span>
+          <span class="tag">VS Code</span>
         </div>
       </div>
-      <div class="skill-card">
-        <span class="skill-icon">✍️</span>
+      <div class="skill-card reveal delay-1">
+        <div class="skill-icon-wrap">✍️</div>
         <div class="skill-name">Technical Writing</div>
         <div class="skill-tags">
-          <span class="tag">Project Reports</span><span class="tag">System Docs</span><span class="tag">Feature Outlines</span><span class="tag">Website Briefs</span>
+          <span class="tag">Project Reports</span>
+          <span class="tag">System Docs</span>
+          <span class="tag">Feature Outlines</span>
+          <span class="tag">Website Briefs</span>
         </div>
       </div>
-      <div class="skill-card">
-        <span class="skill-icon">🗄️</span>
+      <div class="skill-card reveal delay-2">
+        <div class="skill-icon-wrap">🗄️</div>
         <div class="skill-name">Database</div>
         <div class="skill-tags">
-          <span class="tag">Fundamentals</span><span class="tag">Data Structure</span><span class="tag">Actively Learning</span>
+          <span class="tag">Fundamentals</span>
+          <span class="tag">Data Structure</span>
+          <span class="tag">Actively Learning</span>
         </div>
       </div>
-      <div class="skill-card">
-        <span class="skill-icon">📊</span>
+      <div class="skill-card reveal delay-3">
+        <div class="skill-icon-wrap">📊</div>
         <div class="skill-name">Data Analysis</div>
         <div class="skill-tags">
-          <span class="tag">MS Excel</span><span class="tag">Tables</span><span class="tag">Formulas</span><span class="tag">Charts</span>
+          <span class="tag">MS Excel</span>
+          <span class="tag">Tables</span>
+          <span class="tag">Formulas</span>
+          <span class="tag">Charts</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" style="padding-top:0">
+  <section id="projects">
     <div class="section-label"><span class="num">03 —</span> Projects</div>
-    <div class="projects-list">
-      <div class="project-row">
-        <span class="project-num">01</span>
-        <div class="project-info">
-          <div class="project-name">Personal Portfolio Website</div>
-          <div class="project-desc">A website that showcases my profile, skills, and projects — designed and built with HTML, CSS, and JavaScript.</div>
-        </div>
-        <div class="project-meta">
-          <span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span>
-          <span class="coming-soon">Upload coming soon</span>
-        </div>
-      </div>
+    <div class="projects-empty reveal">
+      <div class="empty-icon">🚧</div>
+      <h3 class="empty-title">Projects Coming Soon</h3>
+      <p class="empty-desc">I'm currently working on exciting projects to showcase here. Check back soon or follow my GitHub for updates!</p>
+      <a href="https://github.com/jherzonoligario/jherzon.git" target="_blank" class="btn-primary">Follow on GitHub ↗</a>
     </div>
-    <p class="more-soon">More projects in progress — stay tuned. ✦</p>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <div class="section-label"><span class="num">04 —</span> Certificates & Awards</div>
+    <div class="cert-empty reveal">
+      <div class="empty-icon">🏆</div>
+      <h3 class="empty-title">In Progress</h3>
+      <p class="empty-desc">Currently working toward certifications and achievements. Stay tuned — this section will be updated soon!</p>
+    </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="section-label"><span class="num">04 —</span> Get in Touch</div>
+    <div class="section-label"><span class="num">05 —</span> Get in Touch</div>
     <div class="contact-wrapper">
-      <div>
-        <h2 class="contact-heading">Let's connect &amp; <span class="ghost">grow</span> together.</h2>
+      <div class="contact-left reveal">
+        <h2 class="contact-heading">Let's connect &<br><span class="ghost">grow</span> together.</h2>
         <p class="contact-sub">I'm always open to learning opportunities, collaborations, and new projects. Whether you want to work together or just say hi — feel free to reach out anytime!</p>
-        <a href="mailto:jherzonoligario3@gmail.com" class="big-cta">Send an Email →</a>
+        <a href="mailto:jherzonoligario3@gmail.com" class="btn-primary">Send an Email →</a>
       </div>
-      <div class="contact-links">
+      <div class="contact-right reveal delay-1">
         <a href="mailto:jherzonoligario3@gmail.com" class="contact-link">
           <div class="contact-link-label">
             <div class="contact-link-icon">📧</div>
-            <div><div class="contact-link-text">Email</div><div class="contact-link-sub">jherzonoligario3@gmail.com</div></div>
+            <div>
+              <div class="contact-link-text">Email</div>
+              <div class="contact-link-sub">jherzonoligario3@gmail.com</div>
+            </div>
           </div>
           <span class="contact-link-arrow">↗</span>
         </a>
-        <a href="https://github.com/jherzonoligario" target="_blank" class="contact-link">
+        <a href="https://github.com/jherzonoligario/jherzon.git" target="_blank" class="contact-link">
           <div class="contact-link-label">
             <div class="contact-link-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8F97D"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.31-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 5.8c1.02 0 2.04.14 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.86.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12.01 12.01 0 0 0 24 12C24 5.37 18.63 0 12 0z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.31-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 5.8c1.02 0 2.04.14 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.86.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12.01 12.01 0 0 0 24 12C24 5.37 18.63 0 12 0z"/></svg>
             </div>
-            <div><div class="contact-link-text">GitHub</div><div class="contact-link-sub">github.com/jherzonoligario</div></div>
+            <div>
+              <div class="contact-link-text">GitHub</div>
+              <div class="contact-link-sub">github.com/jherzonoligario</div>
+            </div>
           </div>
           <span class="contact-link-arrow">↗</span>
         </a>
-        <a href="https://www.facebook.com/jherzonoligario" target="_blank" class="contact-link">
+        <a href="https://www.facebook.com/jherzon.oligario.2025" target="_blank" class="contact-link">
           <div class="contact-link-label">
             <div class="contact-link-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8F97D"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
             </div>
-            <div><div class="contact-link-text">Facebook</div><div class="contact-link-sub">facebook.com/jherzonoligario</div></div>
+            <div>
+              <div class="contact-link-text">Facebook</div>
+              <div class="contact-link-sub">facebook.com/jherzon.oligario.2025</div>
+            </div>
           </div>
           <span class="contact-link-arrow">↗</span>
         </a>
